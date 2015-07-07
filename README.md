@@ -2,6 +2,8 @@
 
 This project stems from the http://masteringmean.com site. I've forked an already forked angular-seed project and followed along with the tutorial at https://masteringmean.com/lessons/434?li=1.
 
+This example is also found in the book, AngularJS Web application development Blueprints from Packt.
+
 
 
 # angular-seed — the seed for AngularJS apps

@@ -104,6 +104,7 @@ h2 {
 .slide-left.ng-enter {  
   left:100%;
 }
+
 .slide-left.ng-enter-active {
   left:0%;
 }
