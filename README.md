@@ -1,6 +1,6 @@
 # Expense Manager Mobile Application
 
-This project stems from the http://masteringmean.com site. I've forked an already forked angular-seed project and followed along with the tutorial.
+This project stems from the http://masteringmean.com site. I've forked an already forked angular-seed project and followed along with the tutorial at https://masteringmean.com/lessons/434?li=1.
 
 
 

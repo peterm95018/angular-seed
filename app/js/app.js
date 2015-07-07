@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.services',
   'myApp.directives',
   'myApp.controllers',
-  'ngTouch'
+  'ngTouch',
+  'ngAnimate'
 ]).
 config(['$routeProvider',
   function($routeProvider) {
