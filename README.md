@@ -4,7 +4,7 @@ This project stems from the http://masteringmean.com site. I've forked an alread
 
 This example is also found in the book, AngularJS Web application development Blueprints from Packt.
 
-
+<img src="./exp-mgr.png">
 
 # angular-seed — the seed for AngularJS apps
 
