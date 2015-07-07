@@ -60,7 +60,57 @@ h2 {
   border: thin solid #ccc;
 }
 
-button{
+/* animaate the page slides */
+.page-slide {
+  padding: 2% ;
+  position: absolute;
+  width: 85% ;
+  min-height: 90% ;
+  opacity: 0.8;
+  background: #222;
+  border: thin solid #111;
+  margin: 0% 5% 5% ;
+}
+
+.page-slide.ng-enter,.page-slide.ng-leave {
+   transition: all 0.9s ease-out;
+   -moz-transition: all 0.9s ease-out;
+   -webkit-transition: all 0.9s ease-out;
+}
+
+.slide-right.ng-leave {
+  left:0%;
+}
+
+.slide-right.ng-leave-active {
+  left:100%;
+}
+
+.slide-right.ng-enter {  
+  left:-100%;
+}
+.slide-right.ng-enter-active {
+  left:0%;
+}
+
+.slide-left.ng-leave {
+  left:0%;
+}
+
+.slide-left.ng-leave-active {
+  left:-100%;
+}
+
+.slide-left.ng-enter {  
+  left:100%;
+}
+.slide-left.ng-enter-active {
+  left:0%;
+}
+
+
+
+button {
   background: #3E7504 ;
   color:#CCFF96;
   border: thin solid #3E7504;
@@ -107,6 +157,9 @@ button:disabled {
 #summary, #details {
       background-color:rgba(0, 0, 0, 0.5);
 }
+
+
+
 
 @media all and (min-width: 680px){
   #summary, #details {

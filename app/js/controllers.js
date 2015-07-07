@@ -37,6 +37,7 @@ angular.module('myApp.controllers', [])
   }])
 .controller('NavigationCtrl',['$scope' ,'$location',
     function($scope,$location) {
+      var incrementer = '';
       var navigator = function(incrementer) {
       var pages = ['/', '/add-expense', '/view-summary'];
 
@@ -50,6 +51,7 @@ angular.module('myApp.controllers', [])
       nextUrl = pages[direction];
       $location.url(nextUrl);
     };
+$scope.slidingDirection = (incrementer === 1) ? 'slide-right' : 'slide-left';
 
     $scope.goLeft = function() {
       navigator(-1);
@@ -57,5 +59,10 @@ angular.module('myApp.controllers', [])
     $scope.goRight = function() {
       navigator(1);
     };
+    
 
-}]);
+}
+
+
+
+]);
