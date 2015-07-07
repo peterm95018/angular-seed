@@ -18,6 +18,11 @@ body {
   opacity: 0.3;
 }
 
+/* keep the background image from touch moving */
+.bg-image { 
+  -webkit-user-drag: none;
+}
+
 h1 {
   font-size: 2.5em;
   font-weight: 400;
