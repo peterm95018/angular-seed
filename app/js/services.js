@@ -15,6 +15,9 @@ angular.module('myApp.services', [])
       saveExpense: function(data) {
         var timeStamp = Math.round(new Date().getTime());
         var key = prefix + timeStamp;
+
+        /* add the key to the object for deletion */
+        data.itemKey = key;
       
         data = JSON.stringify(data);
         localStorage[key] = data;
@@ -35,9 +38,16 @@ angular.module('myApp.services', [])
         		return expenses;
       },
 
-      deleteExpense: function(index) {
-        localStorage.removeItem(index);
-        /* this isn't working yet */
+      deleteExpense: function() {
+        var prefixLength = prefix.length;
+        Object.keys(localStorage)
+          .forEach(function(key) {
+            /* write a new if statement comparing the itemKey */
+              if (key.substring(0, prefixLength) == prefix) {
+                  localStorage.removeItem(key);
+              }
+            });
+
       },
 
     getCategoryTotal: function(category) {
