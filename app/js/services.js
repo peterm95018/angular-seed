@@ -35,6 +35,11 @@ angular.module('myApp.services', [])
         		return expenses;
       },
 
+      deleteExpense: function(index) {
+        localStorage.removeItem(index);
+        /* this isn't working yet */
+      },
+
     getCategoryTotal: function(category) {
   		var categoryTotal = 0;
   		var prefixLength = prefix.length;
