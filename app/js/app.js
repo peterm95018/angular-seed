@@ -9,7 +9,8 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'ngTouch',
-  'ngAnimate'
+  'ngAnimate',
+  'flash'
 ]).
 config(['$routeProvider',
   function($routeProvider) {

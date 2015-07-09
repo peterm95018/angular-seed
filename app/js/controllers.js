@@ -8,12 +8,13 @@ angular.module('myApp.controllers', [])
   		$scope.categories = categoryList;
 
   }])
-  .controller('AddExpenseCtrl', ['$scope', 'categoryList', 'expService',
-  	function($scope, categoryList, expService) {
+  .controller('AddExpenseCtrl', ['$scope', 'categoryList', 'expService', 'flash',
+  	function($scope, categoryList, expService, flash) {
   		$scope.categories = categoryList;
 
   		$scope.submit = function() {
   			expService.saveExpense($scope.expense);
+
   		};
 
       $scope.resetForm = function() {
