@@ -18,9 +18,13 @@ angular.module('myApp.controllers', [])
 
       $scope.resetForm = function() {
         console.log('starting reset');
-        $scope.addForm = {};
-        $scope.addForm.$setUntouched();
-        $scope.addForm.$setPristine();
+        if ($scope.addForm) {
+          console.log('found $scope.addForm');
+          $scope.addForm.$setPristine();
+          /* set the expense object to null to clear form fields */
+          $scope.expense = '';
+
+        }
         console.log('ending reset');
       };
 

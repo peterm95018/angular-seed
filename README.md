@@ -2,6 +2,12 @@
 
 This project stems from the http://masteringmean.com site. I've forked an already forked angular-seed project and followed along with the tutorial at https://masteringmean.com/lessons/434?li=1.
 
+# Added by Me
+
+I've added some functionality to delete items in localStorage by adding the localStorage key to the object, then later passing it back to the controller and service from the view summary. We remove the item from the displayed summary and then delete via the service.
+
+I also added 
+
 This example is also found in the book, AngularJS Web application development Blueprints from Packt.
 
 <img src="./exp-mgr.png">
