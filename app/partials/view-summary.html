@@ -9,8 +9,6 @@
         <div class="col-sm-3">{{expense.category}}</div>
         <div class="col-sm-4">{{expense.description}}</div>
         <div class="col-sm-2">{{expense.amount|currency:"$" }}</div>
-<!--         <div class="col-sm-1"><a ng-click="removeExpense({{expense.itemKey}});">X</a></div>
- -->
- <div class="col-sm-1"><a ng-click='removeExpense({{expense.itemKey}})'>X</a></div>
+ <div class="col-sm-1"><a ng-click='removeExpense(); deleteExpense(expense.itemKey);'>X</a></div>
     </div>
 </div>

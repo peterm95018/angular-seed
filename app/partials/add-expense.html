@@ -7,5 +7,5 @@
     <input required type="number" ng-model="expense.amount"></input>
     <label>Description:</label>
     <input type="text" ng-pattern="/^[a-zA-Z 0-9]*$/" ng-model="expense.description"></input>
-    <button ng-disabled="addForm.$invalid" ng-click="submit(); addForm.$setPristine()">Submit</button>
+    <button ng-disabled="addForm.$invalid" ng-click="submit(); addForm.$setPristine();">Submit</button>
 </form>

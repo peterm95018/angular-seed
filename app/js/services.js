@@ -38,16 +38,18 @@ angular.module('myApp.services', [])
         		return expenses;
       },
 
-      deleteExpense: function() {
+      deleteExpense: function(itemKey) {
+        //console.log('itemKey is: ' + itemKey)
         var prefixLength = prefix.length;
         Object.keys(localStorage)
           .forEach(function(key) {
-            /* write a new if statement comparing the itemKey */
-              if (key.substring(0, prefixLength) == prefix) {
-                  localStorage.removeItem(key);
+            //console.log('localStorageKey is: ' +key)
+
+              if (key === itemKey) {
+                localStorage.removeItem(itemKey);
+                console.log('item deleted');
               }
             });
-
       },
 
     getCategoryTotal: function(category) {

@@ -38,9 +38,11 @@ angular.module('myApp.controllers', [])
         $scope.expenses.splice(index,1);
         /* need to remove the key and value from localStorage */
         /* there are AngularJS localStorage directives that could be used */
-        localStorage.removeItem(index);
-        expService.deleteExpense(index);
       };
+
+      $scope.deleteExpense = function(itemKey) {
+        expService.deleteExpense(itemKey);
+      }
 
     });
   	
