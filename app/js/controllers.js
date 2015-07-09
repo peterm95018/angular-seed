@@ -15,6 +15,15 @@ angular.module('myApp.controllers', [])
   		$scope.submit = function() {
   			expService.saveExpense($scope.expense);
   		};
+
+      $scope.resetForm = function() {
+        console.log('starting reset');
+        $scope.addForm = {};
+        $scope.addForm.$setUntouched();
+        $scope.addForm.$setPristine();
+        console.log('ending reset');
+      };
+
   }])
   .controller('ViewSummaryCtrl', ['$scope', 'categoryList', 'expService',
   	function($scope, categoryList, expService) {
@@ -36,13 +45,12 @@ angular.module('myApp.controllers', [])
         /* remove the expense from the list */
       $scope.removeExpense = function(index) {
         $scope.expenses.splice(index,1);
-        /* need to remove the key and value from localStorage */
-        /* there are AngularJS localStorage directives that could be used */
       };
 
+      /* call the deleteExpense function for this itemKey in services */
       $scope.deleteExpense = function(itemKey) {
         expService.deleteExpense(itemKey);
-      }
+      };
 
     });
   	
