@@ -1,5 +1,10 @@
 <h2>Add Expense</h2>
 <form id="addForm" name="addForm" novalidate ng-submit="submit(); resetForm();">
+    <!-- Subscribe to success flash messages. -->
+<div flash-alert="success" active-class="in" class="alert fade">
+    <!-- <strong class="alert-heading">Congrats!</strong> -->
+    <span class="alert-message">{{flash.message}}</span>
+</div>
     <label>Category</label>
     <select ng-model="expense.category" ng-options="category for category in categories">
     </select>

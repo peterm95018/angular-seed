@@ -10,7 +10,8 @@ angular.module('myApp', [
   'myApp.controllers',
   'ngTouch',
   'ngAnimate',
-  'flash'
+  'angular-flash.service',
+  'angular-flash.flash-alert-directive'
 ]).
 config(['$routeProvider',
   function($routeProvider) {

@@ -14,7 +14,7 @@ angular.module('myApp.controllers', [])
 
   		$scope.submit = function() {
   			expService.saveExpense($scope.expense);
-
+        flash.success = 'Expense Added';
   		};
 
       $scope.resetForm = function() {
