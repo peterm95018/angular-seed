@@ -8,13 +8,14 @@ angular.module('myApp.controllers', [])
   		$scope.categories = categoryList;
 
   }])
-  .controller('AddExpenseCtrl', ['$scope', 'categoryList', 'expService', 'flash',
-  	function($scope, categoryList, expService, flash) {
+  .controller('AddExpenseCtrl', ['$scope', 'categoryList', 'expService', 'Flash',
+  	function($scope, categoryList, expService, Flash) {
   		$scope.categories = categoryList;
 
   		$scope.submit = function() {
   			expService.saveExpense($scope.expense);
-        flash.success = 'Expense Added';
+         var message = '<strong>Well done!</strong> Expense Added.';
+        Flash.create('success', message, 'custom-class');
   		};
 
       $scope.resetForm = function() {
@@ -30,8 +31,8 @@ angular.module('myApp.controllers', [])
       };
 
   }])
-  .controller('ViewSummaryCtrl', ['$scope', 'categoryList', 'expService',
-  	function($scope, categoryList, expService) {
+  .controller('ViewSummaryCtrl', ['$scope', 'categoryList', 'expService', 'Flash',
+  	function($scope, categoryList, expService, Flash) {
   		$scope.expenses = expService.getExpense();
 
       $scope.summaryData = [];
@@ -55,6 +56,8 @@ angular.module('myApp.controllers', [])
       /* call the deleteExpense function for this itemKey in services */
       $scope.deleteExpense = function(itemKey) {
         expService.deleteExpense(itemKey);
+        var message = '<strong>Well done!</strong> Expense Deleted.';
+        Flash.create('success', message, 'custom-class');
       };
 
     });
