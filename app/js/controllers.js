@@ -56,8 +56,8 @@ angular.module('myApp.controllers', [])
       /* call the deleteExpense function for this itemKey in services */
       $scope.deleteExpense = function(itemKey) {
         expService.deleteExpense(itemKey);
-        var message = '<strong>Well done!</strong> Expense Deleted.';
-        Flash.create('success', message, 'custom-class');
+        var message = 'Expense Deleted.';
+        Flash.create('danger', message, 'custom-class');
       };
 
     });

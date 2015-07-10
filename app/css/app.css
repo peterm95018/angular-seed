@@ -160,7 +160,9 @@ button:disabled {
       /* background-color:rgba(0, 0, 0, 0.5); */
 }
 
-
+.deleteExpense {
+  color: #a94442;
+}
 
 
 @media all and (min-width: 680px){
