@@ -9,10 +9,8 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'ngTouch',
-  'ngAnimate',
-  'angular-flash.service',
-  'angular-flash.flash-alert-directive'
-]).
+  'ngAnimate'
+  ]).
 config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.when('/', {
