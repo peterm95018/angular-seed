@@ -10,7 +10,6 @@ I also added some code to set the form to pristine and clear the fields after su
 
 I also added angular-flash-alert module and present a success message for adding and deleting expense items.
 
-This example is also found in the book, AngularJS Web application development Blueprints from Packt.
 
 <img src="./exp-mgr.png">
 
