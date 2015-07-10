@@ -6,7 +6,9 @@ This project stems from the http://masteringmean.com site. I've forked an alread
 
 I've added some functionality to delete items in localStorage by adding the localStorage key to the object, then later passing it back to the controller and service from the view summary. We remove the item from the displayed summary and then delete via the service.
 
-I also added some code to set the form to pristine and clear the fields after submit.
+I also added some code to set the form to pristine and clear the fields after submit. Note that I had to delete the expense object to actually clear the field...
+
+I also added angular-flash-alert module and present a success message for adding and deleting expense items.
 
 This example is also found in the book, AngularJS Web application development Blueprints from Packt.
 
